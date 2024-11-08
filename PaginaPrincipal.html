@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GIMNASIO</title>
+    <style>
+        body {
+            background-color: black;
+        }
+
+        header {
+            color: white;
+            text-align: center;
+        }
+
+        .semana a {
+            padding: 2em;
+            text-decoration: none;
+            color: white;
+        }
+
+        .semana {
+            text-align: center;
+        }
+
+        .calendar {
+            display: grid;
+            grid-template-columns: 100px repeat(5, 1fr);
+            /* Una columna para las horas y una para cada día */
+            grid-template-rows: auto repeat(9, 1fr);
+            /* Una fila para el encabezado y una para cada hora */
+            width: 90%;
+            max-width: 800px;
+            border: 1px solid #ccc;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-top: 2em;
+            margin-left: 24%;
+        }
+
+        .header {
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            font-weight: bold;
+            border: 1px solid #ddd;
+        }
+
+        .empty {
+            background-color: #4CAF50;
+        }
+
+        .day {
+            border-left: 1px solid #ddd;
+        }
+
+        .hours {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #f3f3f3;
+            border: 1px solid #ddd;
+            font-weight: bold;
+        }
+
+        .cell {
+            border: 1px solid #ddd;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #fff;
+            cursor: pointer;
+        }
+
+        .cell:hover {
+            background-color: #f0f0f0;
+        }
+        .RUTINA{
+            color: white;
+        }
+        .Ej1-L{
+            display: flex;
+        }
+        .texto{
+            margin-top: 3em;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>RUTINA GIMNASIO</h1>
+    </header>
+    <div class="semana">
+        <a href="#LUNES">LUNES</a>
+        <a href="#MARTES">MARTES</a>
+        <a href="#MIERCOLES">MIERCOLES</a>
+        <a href="#JUEVES">JUEVES</a>
+        <a href="#VIERNES">VIERNES</a>
+    </div>
+
+    <div class="calendar">
+        <!-- Encabezado de días de la semana -->
+        <div class="header empty"></div> <!-- Celda vacía para la esquina -->
+        <div class="header day">Lunes</div>
+        <div class="header day">Martes</div>
+        <div class="header day">Miércoles</div>
+        <div class="header day">Jueves</div>
+        <div class="header day">Viernes</div>
+
+        <!-- Horas y celdas del calendario -->
+        <div class="hours">06:00 - 06:15</div><div class="cell">DESPERTAR</div><div class="cell">DESPERTAR</div><div class="cell">DESPERTAR</div><div class="cell">DESPERTAR</div><div class="cell">DESPERTAR</div>
+        <div class="hours">06:30 - 07:30</div><div class="cell">GIM CARDIO</div><div class="cell">GIM CARDIO</div><div class="cell">GIM CARDIO</div><div class="cell">GIM CARDIO</div><div class="cell">GIM CARDIO</div>
+        <div class="hours">07:45 - 08:00</div><div class="cell">DUCHA</div><div class="cell">DUCHA</div><div class="cell">DUCHA</div><div class="cell">DUCHA</div><div class="cell">DUCHA</div>
+        <div class="hours">08:30 - 14:00</div><div class="cell">CLASE</div><div class="cell">CLASE</div><div class="cell">CLASE</div><div class="cell">CLASE</div><div class="cell">CLASE</div>
+        <div class="hours">12:00 - 13:00</div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div>
+        <div class="hours">13:00 - 14:00</div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div>
+        <div class="hours">14:00 - 15:00</div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div>
+        <div class="hours">15:00 - 16:00</div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div>
+        <div class="hours">16:00 - 17:00</div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div>
+    </div>
+
+    <div class="RUTINA">
+        <div id="LUNES">
+            <h1><ul>LUNES</ul></h1>
+            <h2>Pecho-Triceps</h2>
+            <hr>
+            <h3>EJERCICIO 1</h3>
+            <div class="Ej1-L">
+                <img src="./IMAGENES/Press-banca-plano.webp" alt="PressBanca" width="300" height="300">
+                <div class="texto">
+                    <p>Press banca con barra (3-4 series de 8-10 repeticiones)</p>
+                    <p>Objetivo: Activar el pecho en su totalidad</p>
+                    <p>Técnica: Mantén los pies firmes en el suelo, la espalda ligeramente arqueada, y controla el movimiento tanto al subir como al bajar</p>
+                </div>
+            </div>
+            <hr>
+        </div>
+        <div id="MARTES">
+            <h1><ol>MARTES</ol></h1>
+            
+        </div>
+        <div id="MIERCOLES">
+            <h1><ol>MIERCOLES</ol></h1>
+            
+        </div>
+        <div id="JUEVES">
+            <h1><ol>JUEVES</ol></h1>
+            
+        </div>
+        <div id="VIERNES">
+            <h1><ol>VIERNES</ol></h1>
+            
+        </div>
+    </div>
+</body>
+
+</html>
