@@ -86,11 +86,111 @@
         .texto{
             margin-top: 4em;
         }
+        body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.Ej1-L {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.Ej1-L img {
+    width: 300px;
+    height: 300px;
+}
+
+.texto {
+    width: 60%;
+    padding-left: 20px;
+}
+
+h1, h2, h3 {
+    font-size: 24px;
+    margin: 10px 0;
+}
+
+hr {
+    border: 1px solid #ddd;
+    margin: 20px 0;
+}
+
+/* Media Queries para pantallas móviles */
+@media screen and (max-width: 768px) {
+    /* Asegurarse de que las imágenes no se desborden */
+    .Ej1-L img {
+        width: 100%;
+        height: auto;
+    }
+
+    /* Alineación de los elementos en una columna para pantallas más pequeñas */
+    .Ej1-L {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* Hacer que los textos ocupen el 100% del ancho en móviles */
+    .texto {
+        width: 100%;
+        padding-left: 0;
+        text-align: center;
+    }
+
+    h1, h2, h3 {
+        font-size: 20px; /* Reducir el tamaño de los encabezados */
+    }
+
+    /* Espaciado entre los bloques */
+    .Ej1-L {
+        margin-bottom: 15px;
+    }
+    
+    /* Reajustar la altura de los textos en la parte inferior */
+    p {
+        font-size: 14px; /* Reducir tamaño de texto */
+        line-height: 1.6;
+    }
+
+    /* Ajustar los botones y enlaces */
+    a {
+        display: inline-block;
+        padding: 10px 20px;
+        text-decoration: none;
+        background-color: #007BFF;
+        color: white;
+        border-radius: 5px;
+        text-align: center;
+        margin-top: 10px;
+    }
+
+    a:hover {
+        background-color: #0056b3;
+    }
+}
+
+/* Media Query para pantallas muy pequeñas (como teléfonos en modo vertical) */
+@media screen and (max-width: 480px) {
+    h1, h2, h3 {
+        font-size: 18px; /* Aún más pequeños en pantallas muy pequeñas */
+    }
+
+    .texto {
+        padding-left: 10px;
+    }
+
+    p {
+        font-size: 13px;
+    }
+}
     </style>
 </head>
 
 <body>
-    <header>
+    <header id="inicio">
         <h1>RUTINA GIMNASIO</h1>
     </header>
     <div class="semana">
@@ -101,26 +201,7 @@
         <a href="#VIERNES">VIERNES</a>
     </div>
 
-    <div class="calendar">
-        <!-- Encabezado de días de la semana -->
-        <div class="header empty"></div> <!-- Celda vacía para la esquina -->
-        <div class="header day">Lunes</div>
-        <div class="header day">Martes</div>
-        <div class="header day">Miércoles</div>
-        <div class="header day">Jueves</div>
-        <div class="header day">Viernes</div>
 
-        <!-- Horas y celdas del calendario -->
-        <div class="hours">06:00 - 06:15</div><div class="cell">DESPERTAR</div><div class="cell">DESPERTAR</div><div class="cell">DESPERTAR</div><div class="cell">DESPERTAR</div><div class="cell">DESPERTAR</div>
-        <div class="hours">06:30 - 07:30</div><div class="cell">GIM CARDIO</div><div class="cell">GIM CARDIO</div><div class="cell">GIM CARDIO</div><div class="cell">GIM CARDIO</div><div class="cell">GIM CARDIO</div>
-        <div class="hours">07:45 - 08:00</div><div class="cell">DUCHA</div><div class="cell">DUCHA</div><div class="cell">DUCHA</div><div class="cell">DUCHA</div><div class="cell">DUCHA</div>
-        <div class="hours">08:30 - 14:00</div><div class="cell">CLASE</div><div class="cell">CLASE</div><div class="cell">CLASE</div><div class="cell">CLASE</div><div class="cell">CLASE</div>
-        <div class="hours">12:00 - 13:00</div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div>
-        <div class="hours">13:00 - 14:00</div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div>
-        <div class="hours">14:00 - 15:00</div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div>
-        <div class="hours">15:00 - 16:00</div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div>
-        <div class="hours">16:00 - 17:00</div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div>
-    </div>
 
     <div class="RUTINA">
         <div id="LUNES">
@@ -197,6 +278,7 @@
                 </div>
             </div>
             <hr>
+            <a href="#inicio">INICIO</a>
         </div>
         <div id="MARTES">
             <h1><ol>MARTES</ol></h1>
@@ -292,6 +374,7 @@
                 </div>
             </div>
             <hr>
+            <a href="#inicio">INICIO</a>
         </div>
         <div id="MIERCOLES">
             <h1><ol>MIERCOLES</ol></h1>
@@ -367,6 +450,7 @@
                 </div>
             </div>
             <hr>
+            <a href="#inicio">INICIO</a>
         </div>
         <div id="JUEVES">
             <h1><ol>JUEVES</ol></h1>
@@ -462,6 +546,7 @@
                 </div>
             </div>
             <hr>
+            <a href="#inicio">INICIO</a>
         </div>
         <div id="VIERNES">
             <h1><ol>VIERNES</ol></h1>
@@ -537,6 +622,7 @@
                 </div>
             </div>
             <hr>
+            <a href="#inicio">INICIO</a>
         </div>
     </div>
 </body>
